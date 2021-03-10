@@ -12,4 +12,20 @@ class Api::UsersController < ApplicationController
       render json: { errors: user.errors.full_messages }, status: :bad_request
     end
   end
+
+  def create_dog
+    if current_user
+      dog = Dog.new(
+        name: params[:name],
+        age: params[:age],
+        breed: params[:age],
+      )
+      dog.save
+      render json: {
+        message: dog,
+      }
+    else
+      render json: { message: "you aren't logged in pal" }
+    end
+  end
 end
