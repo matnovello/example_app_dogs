@@ -18,7 +18,7 @@ class Api::UsersController < ApplicationController
       dog = Dog.new(
         name: params[:name],
         age: params[:age],
-        breed: params[:age],
+        breed: params[:breed],
         user_id: params[:user_id],
       )
       dog.save
