@@ -44,3 +44,6 @@ gem 'http'
 gem 'rack-cors'
 gem 'jb'
 gem 'bcrypt', '~> 3.1.7'
+gem 'jwt'
+
+
