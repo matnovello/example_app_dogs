@@ -19,10 +19,12 @@ class Api::UsersController < ApplicationController
         name: params[:name],
         age: params[:age],
         breed: params[:age],
+        user_id: params[:user_id],
       )
       dog.save
       render json: {
         message: dog,
+        user: dog.user,
       }
     else
       render json: { message: "you aren't logged in pal" }
